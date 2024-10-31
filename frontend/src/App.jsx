@@ -5,10 +5,11 @@ import Category from "./pages/Category";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <main className="bg-orange-900 text-white">
+    <main className="">
       <BrowserRouter>
         <Header />
         <Routes>
@@ -22,9 +23,8 @@ export default function App() {
           <Route path="/cart-page" element={<Cart />}/>
           <Route path="/login" element={<Login />}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
-
-
     </main>
   )
 }
