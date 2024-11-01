@@ -14,7 +14,9 @@ export default {
         'greenLC': '#4E6151'
       },
       padding: {
-        'margin1': '20px 0px', // Define a classe personalizada
+        'padding1': '13px 80px', // Define a classe personalizada
+        'padding2': '13px 50px',
+        'padding3': '18px 30px'
       },
       fontSize: {
         'fsize1': '20px', // Defina seu tamanho personalizado

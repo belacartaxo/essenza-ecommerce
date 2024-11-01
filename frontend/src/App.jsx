@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <main className="">
+    <main className="bg-gray-50">
       <BrowserRouter>
         <Header />
         <Routes>
