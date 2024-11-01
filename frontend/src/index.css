@@ -11,10 +11,27 @@
     color: #522B29;
 }
 
-.icons path{
+.icons1 path{
     transition: all 0.3s;
 }
 
-.icons:hover path{
+.icons1:hover path{
+    color: #ea580c;
+}
+
+.btn-car:hover .icons1{
+    border-color: #ea580c;
+}
+
+.btn-car:hover path{
+    color: #ea580c;
+}
+
+.icons2 path{
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-log:hover path{
     color: #ea580c;
 }
