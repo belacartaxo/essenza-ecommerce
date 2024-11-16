@@ -16,7 +16,8 @@ export default {
       padding: {
         'padding1': '13px 80px', // Define a classe personalizada
         'padding2': '13px 50px',
-        'padding3': '18px 30px'
+        'padding3': '18px 30px',
+        'padding4': '0px 80px'
       },
       fontSize: {
         'fsize1': '20px', // Defina seu tamanho personalizado
