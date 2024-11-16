@@ -14,7 +14,8 @@ const AddProduct = () => {
 
     try {
       // Envia a categoria para o backend
-      const response = await fetch('/api/categories', { 
+      console.log("esperando")
+      const response = await fetch('http://localhost:5000/categories/add', { 
         /*
           O fetch é usado para fazer uma requisição HTTP
           Envia uma requisição POST para o endpoint /api/categories
@@ -23,8 +24,10 @@ const AddProduct = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name: category }), //transforma o objeto em uma string json
+        body: JSON.stringify({ category_name: category }), //transforma o objeto em uma string json
       })
+
+      console.log("respondeu")
 
       if (response.ok) { //Essa propriedade verifica se o status da resposta HTTP é 2xx (ou seja, uma requisição bem-sucedida).
         alert('Category added successfully!')
