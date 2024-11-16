@@ -37,8 +37,7 @@ cur.execute("""
 cur.execute("""
     CREATE TABLE IF NOT EXISTS categories (
         category_id INTEGER PRIMARY KEY AUTOINCREMENT,
-        category_name TEXT NOT NULL,
-        first_name TEXT NOT NULL
+        category_name TEXT NOT NULL
     );
     """)
 
