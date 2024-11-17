@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from ..utils.sanitize_input import sanitize_input
-from ..utils.get_db_connection import get_db_connection
+from ..utils.hfjmhshfj.get_db_connection import get_db_connection
 
 categories_bp = Blueprint('categories', __name__)
 """
@@ -45,9 +45,9 @@ def add_category():  # This function will be executed when the /add route is cal
         """, (category_name,))
 
         conn.commit()  # Save changes to the database
-        conn.close()   # Close the connection
-
-        return jsonify({'message': 'Category added successfully!'}), 201
     except Exception as e:
         print(f"Error: {e}")
         return jsonify({'error': 'Failed to add category'}), 500
+    finally:
+        conn.close() # Close the connection
+    return jsonify({'message': 'Category added successfully!'}), 201

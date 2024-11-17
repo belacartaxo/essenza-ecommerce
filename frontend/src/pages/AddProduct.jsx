@@ -14,7 +14,6 @@ const AddProduct = () => {
 
     try {
       // Envia a categoria para o backend
-      console.log("esperando")
       const response = await fetch('http://localhost:5000/categories/add', { 
         /*
           O fetch é usado para fazer uma requisição HTTP
@@ -26,8 +25,6 @@ const AddProduct = () => {
         },
         body: JSON.stringify({ category_name: category }), //transforma o objeto em uma string json
       })
-
-      console.log("respondeu")
 
       if (response.ok) { //Essa propriedade verifica se o status da resposta HTTP é 2xx (ou seja, uma requisição bem-sucedida).
         alert('Category added successfully!')
@@ -48,7 +45,8 @@ const AddProduct = () => {
         name="category-name" 
         id="category-name" 
         placeholder='Category name' 
-        value={category} onChange={(e) => setCategory(e.target.value)} 
+        value={category} 
+        onChange={(e) => setCategory(e.target.value)} 
       />
       <button 
         type="submit" 
