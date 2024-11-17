@@ -93,7 +93,7 @@ cur.execute("""
         review_id INTEGER PRIMARY KEY AUTOINCREMENT,
         product_id INTEGER NOT NULL,
         user_id INTEGER NOT NULL,
-        rating INTEGRE CHECK(RATING BETWEEN 1 AND 5),
+        rating INTEGER CHECK(RATING BETWEEN 1 AND 5),
         review_text TEXT,
         created_at DATETIME NOT NULL,
         FOREIGN KEY(user_id) REFERENCES users(user_id)
@@ -102,10 +102,10 @@ cur.execute("""
     """)
 
 cur.execute("""
-    CREATE TABLE IF NOT EXISTS product_reviews (
+    CREATE TABLE IF NOT EXISTS product_discount (
         discount_id INTEGER PRIMARY KEY AUTOINCREMENT,
         product_id  INTEGER NOT NULL,
-        discount_percentage INTEGER CHECK(RATING BETWEEN 0 AND 100) NOT NULL,
+        discount_percentage INTEGER CHECK(discount_percentage BETWEEN 0 AND 100) NOT NULL,
         valid_to DATETIME NOT NULL,
         created_at DATETIME NOT NULL,
         FOREIGN KEY(product_id) REFERENCES products(product_id) 
